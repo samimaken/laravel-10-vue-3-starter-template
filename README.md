@@ -44,8 +44,6 @@ This is a starter template for developing web applications using Laravel 10 and 
 
 Follow these steps to set up and run the project locally.
 
-composer install
-npm install
 
 
 ### Prerequisites
@@ -61,3 +59,6 @@ Make sure you have the following installed:
 
    ```bash
    git clone https://github.com/samimaken/laravel-10-vue-3-starter-template.git
+2. composer install
+3. npm install
+
