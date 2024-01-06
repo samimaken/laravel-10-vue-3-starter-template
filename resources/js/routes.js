@@ -3,6 +3,8 @@ import store from '@/store'
 
 import Login from "./pages/auth/Login.vue"
 import Register from "./pages/auth/Register.vue"
+import ForgetPassword from "./pages/auth/ForgetPassword.vue"
+import ResetPassword from "./pages/auth/ResetPassword.vue"
 import Dashboard from "./pages/Dashboard.vue"
 import Profile from "./pages/Profile.vue"
 import Posts from "./pages/Posts.vue"
@@ -65,6 +67,24 @@ const router = createRouter({
             meta: {
                 middleware: "guest",
                 title: `Register`
+            }
+        },
+        {
+            name: 'forget.password',
+            component: ForgetPassword,
+            path: '/forget-password',
+            meta: {
+                middleware: "guest",
+                title: `Forget Password`
+            }
+        },
+        {
+            name: 'reset.password',
+            component: ResetPassword,
+            path: '/password/reset/:token',
+            meta: {
+                middleware: "guest",
+                title: `Reset Password`
             }
         }
     ]
