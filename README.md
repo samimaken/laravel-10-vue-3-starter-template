@@ -37,7 +37,8 @@ This is a starter template for developing web applications using Laravel 10 and 
 - Vue Router for client-side routing
 - Vuex for state management
 - Sweet Alerts
-- Login, Register, Profile
+- VForm
+- Login, Register, Profile, Forget Password
 - Posts CRUD
 
 ## Getting Started
