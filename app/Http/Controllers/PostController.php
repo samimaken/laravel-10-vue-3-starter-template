@@ -11,7 +11,7 @@ class PostController extends Controller
     public function index(Request $request)
     {
         $posts = Post::all();
-        return response()->json(['success' => true, 'data' => $posts]);
+        return response()->json(['success' => true, 'data' => $posts], 200);
     }
 
     public function store(Request $request)
@@ -25,7 +25,7 @@ class PostController extends Controller
             $post->title = $request->title;
             $post->post = $request->description;
             $post->save();
-            return response()->json(['success' => true, 'message' => 'Post updated successfully']);
+            return response()->json(['success' => true, 'message' => 'Post updated successfully'], 200);
         } catch (Exception $e) {
             return response()->json(['success' => false, 'message' => $e->getMessage()]);
         }
