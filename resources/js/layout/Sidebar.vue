@@ -1,6 +1,6 @@
 <template>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <router-link :to="{name: 'Home'}" class="brand-link">
+        <router-link :to="{name: 'home'}" class="brand-link">
             <img
                 src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png"
                 alt="AdminLTE Logo"
@@ -48,7 +48,7 @@
                     data-accordion="false"
                 >
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Starter Pages
@@ -57,7 +57,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Active Page</p>
                                 </a>
@@ -71,7 +71,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'posts'}" class="nav-link">
+                        <router-link :to="{name: 'posts'}" class="nav-link" :class="{'active': $route.name == 'posts'}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Posts

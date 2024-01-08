@@ -72,7 +72,7 @@
                             <div class="col-12 text-center">
                                 <label
                                     >Don't have an account?
-                                    <router-link :to="{ name: 'Register' }"
+                                    <router-link :to="{ name: 'register' }"
                                         >Register Now!</router-link
                                     ></label
                                 >

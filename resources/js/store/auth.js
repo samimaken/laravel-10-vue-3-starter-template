@@ -30,7 +30,7 @@ export default {
                 .then(({ data }) => {
                     commit("SET_AUTHENTICATION", true);
                     commit("SET_USER", data);
-                    router.push({ name: "Dashboard" });
+                    router.push({ name: "dashboard" });
                 })
                 .catch(({ response: { data } }) => {
                     commit("SET_AUTHENTICATION", false);
@@ -47,6 +47,7 @@ export default {
                 .catch(({ response: { data } }) => {
                     commit("SET_AUTHENTICATION", false);
                     commit("SET_USER", {});
+                    router.push({ name: "login" });
                 });
         },
         logout({ commit }) {

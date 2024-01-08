@@ -16,7 +16,7 @@
                                 <Button class="btn btn-primary btn-block" :form="form">Submit</Button>
                             </div>
                             <div class="col-12 text-center">
-                                <label>Already have an account? <router-link :to="{name:'Login'}">Login!</router-link></label>
+                                <label>Already have an account? <router-link :to="{name:'login'}">Login!</router-link></label>
                             </div>
                         </form>
                     </div>

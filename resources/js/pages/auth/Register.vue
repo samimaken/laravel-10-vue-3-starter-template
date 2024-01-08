@@ -36,7 +36,7 @@
                                 </button>
                             </div>
                             <div class="col-12 text-center">
-                                <label>Already have an account? <router-link :to="{name:'Login'}">Login Now!</router-link></label>
+                                <label>Already have an account? <router-link :to="{name:'login'}">Login Now!</router-link></label>
                             </div>
                         </form>
                     </div>

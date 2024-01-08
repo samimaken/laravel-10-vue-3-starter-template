@@ -16,7 +16,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            name: 'Home',
+            name: 'home',
             component: Default,
             path: '/',
             meta: {
@@ -25,7 +25,7 @@ const router = createRouter({
             },
             children:[
                 {
-                    name: 'Dashboard',
+                    name: 'dashboard',
                     component: Dashboard,
                     path: '/home',
                     meta: {
@@ -52,7 +52,7 @@ const router = createRouter({
         },
 
         {
-            name: 'Login',
+            name: 'login',
             component: Login,
             path: '/login',
             meta: {
@@ -61,7 +61,7 @@ const router = createRouter({
             }
         },
         {
-            name: 'Register',
+            name: 'register',
             component: Register,
             path: '/register',
             meta: {
@@ -94,14 +94,14 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title
     if (to.meta.middleware == "guest") {
         if (store.state.auth.authenticated) {
-            next({ name: "Dashboard" })
+            next({ name: "dashboard" })
         }
         next()
     } else {
         if (store.state.auth.authenticated) {
             next()
         } else {
-            next({ name: "Login" })
+            next({ name: "login" })
         }
     }
 })
